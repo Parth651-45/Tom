@@ -1,42 +1,35 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
-
-HELP_1 = """✅**<u>Admin Commands:</u>**
-
-**c** stands for channel play.
-
-/pause or /cpause - Pause the playing music.
-/resume or /cresume- Resume the paused music.
-/mute or /cmute- Mute the playing music.
-/unmute or /cunmute- Unmute the muted music.
-/skip or /cskip- Skip the current playing music.
-/stop or /cstop- Stop the playing music.
-/shuffle or /cshuffle- Randomly shuffles the queued playlist.
-/seek or /cseek - Forward Seek the music to your duration
-/seekback or /cseekback - Backward Seek the music to your duration
-/restart - Restart bot for your chat .
 
 
-✅<u>**Specific Skip:**</u>
-/skip or /cskip [Number(example: 3)] 
-    - Skips music to a the specified queued number. Example: /skip 3 will skip music to third queued music and will ignore 1 and 2 music in queue.
+HELP_1 = """✅**<u>𝙰𝙳𝙼𝙸𝙽 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂:</u>**
 
-✅<u>**Loop Play:**</u>
-/loop or /cloop [enable/disable] or [Numbers between 1-10] 
-    - When activated, bot loops the current playing music to 1-10 times on voice chat. Default to 10 times.
+**c** 𝚂𝚃𝙰𝙽𝙳𝚂 𝙵𝙾𝚁 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 𝙿𝙻𝙰𝚈.
 
-✅<u>**Auth Users:**</u>
-Auth Users can use admin commands without admin rights in your chat.
+/pause or /cpause - 𝙿𝙰𝚄𝚂𝙴 𝚃𝙷𝙴 𝙿𝙻𝙰𝚈𝙸𝙽𝙶 𝙼𝚄𝚂𝙸𝙲. 
+/resume or /cresume- 𝚁𝙴𝚂𝚄𝙼𝙴 𝚃𝙷𝙴 𝙿𝙰𝚄𝚂𝙴𝙳 𝙼𝚄𝚂𝙸𝙲.
+/mute or /cmute- 𝙼𝚄𝚃𝙴 𝚃𝙷𝙴 𝙿𝙻𝙰𝚈𝙸𝙽𝙶 𝙼𝚄𝚂𝙸𝙲.
+/unmute or /cunmute- 𝚄𝙽𝙼𝚄𝚃𝙴 𝚃𝙷𝙴 𝙼𝚄𝚃𝙴𝙳 𝙼𝚄𝚂𝙸𝙲.
+/skip or /cskip- 𝚂𝙺𝙸𝙿 𝚃𝙷𝙴 𝙲𝚄𝚁𝚁𝙴𝙽𝚃 𝙿𝙻𝙰𝚈𝙸𝙽𝙶 𝙼𝚄𝚂𝙸𝙲.
+/stop or /cstop- 𝚂𝚃𝙾𝙿 𝚃𝙷𝙴 𝙿𝙻𝙰𝚈𝙸𝙽𝙶 𝙼𝚄𝚂𝙸𝙲.
+/shuffle or /cshuffle- 𝚁𝙰𝙽𝙳𝙾𝙼𝙻𝚈 𝚂𝙷𝚄𝙵𝙵𝙻𝙴𝚂 𝚃𝙷𝙴 𝚀𝚄𝙴𝚄𝙴𝙳 𝙿𝙻𝙰𝚈𝙻𝙸𝚂𝚃.
+/seek or /cseek - 𝙵𝙾𝚁𝚆𝙰𝚁𝙳 𝚂𝙴𝙴𝙺 𝚃𝙷𝙴 𝙼𝚄𝚂𝙸𝙲 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽
+/seekback or /cseekback - 𝙱𝙰𝙲𝙺𝚆𝙰𝚁𝙳 𝚂𝙴𝙴𝙺 𝚃𝙷𝙴 𝙼𝚄𝚂𝙸𝙲 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙳𝚄𝚁𝙰𝚃𝙸𝙾𝙽
+/restart - 𝚁𝙴𝚂𝚃𝙰𝚁𝚃 𝙱𝙾𝚃 𝙵𝙾𝚁 𝚈𝙾𝚄𝚁 𝙲𝙷𝙰𝚃 .
 
-/auth [Username] - Add a user to AUTH LIST of the group.
-/unauth [Username] - Remove a user from AUTH LIST of the group.
-/authusers - Check AUTH LIST of the group."""
+
+✅<u>**𝚂𝙿𝙴𝙲𝙸𝙵𝙸𝙲 𝚂𝙺𝙸𝙿:**</u>
+/skip or /cskip [𝙽𝚄𝙼𝙱𝙴𝚁(𝙴𝚇𝙰𝙼𝙿𝙻𝙴: 3)] 
+    - 𝚂𝙺𝙸𝙿𝚂 𝙼𝚄𝚂𝙸𝙲 𝚃𝙾 𝙰 𝚃𝙷𝙴 𝚂𝙿𝙴𝙲𝙸𝙵𝙸𝙴𝙳 𝚀𝚄𝙴𝚄𝙴𝙳 𝙽𝚄𝙼𝙱𝙴𝚁. 𝙴𝚇𝙰𝙼𝙿𝙻𝙴: /skip 3 𝚆𝙸𝙻𝙻 𝚂𝙺𝙸𝙿 𝙼𝚄𝚂𝙸𝙲 𝚃𝙾 𝚃𝙷𝙸𝚁𝙳 𝚀𝚄𝙴𝚄𝙴𝙳 𝙼𝚄𝚂𝙸𝙲 𝙰𝙽𝙳 𝚆𝙸𝙻𝙻 𝙸𝙶𝙽𝙾𝚁𝙴 1 𝙰𝙽𝙳 2 𝙼𝚄𝚂𝙸𝙲 𝙸𝙽 𝚀𝚄𝙴𝚄𝙴.
+
+✅<u>**𝙻𝙾𝙾𝙿 𝙿𝙻𝙰𝚈:**</u>
+/loop or /cloop [𝙴𝙽𝙰𝙱𝙻𝙴/𝙳𝙸𝚂𝙰𝙱𝙻𝙴] or [𝙽𝚄𝙼𝙱𝙴𝚁𝚂 𝙱𝙴𝚃𝚆𝙴𝙴𝙽 1-10] 
+    - 𝚆𝙷𝙴𝙽 𝙰𝙲𝚃𝙸𝚅𝙰𝚃𝙴𝙳, 𝙱𝙾𝚃 𝙻𝙾𝙾𝙿𝚂 𝚃𝙷𝙴 𝙲𝚄𝚁𝚁𝙴𝙽𝚃 𝙿𝙻𝙰𝚈𝙸𝙽𝙶 𝙼𝚄𝚂𝙸𝙲 𝚃𝙾 1-10 𝚃𝙸𝙼𝙴𝚂 𝙾𝙽 𝚅𝙾𝙸𝙲𝙴 𝙲𝙷𝙰𝚃. 𝙳𝙴𝙵𝙰𝚄𝙻𝚃 𝚃𝙾 10 𝚃𝙸𝙼𝙴𝚂.
+
+✅<u>**𝙰𝚄𝚃𝙷 𝚄𝚂𝙴𝚁𝚂:**</u>
+𝙰𝚄𝚃𝙷 𝚄𝚂𝙴𝚁𝚂 𝙲𝙰𝙽 𝚄𝚂𝙴 𝙰𝙳𝙼𝙸𝙽 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂 𝚆𝙸𝚃𝙷𝙾𝚄𝚃 𝙰𝙳𝙼𝙸𝙽 𝚁𝙸𝙶𝙷𝚃𝚂 𝙸𝙽 𝚈𝙾𝚄𝚁 𝙲𝙷𝙰𝚃.
+
+/auth [𝚄𝚂𝙴𝚁𝙽𝙰𝙼𝙴] - 𝙰𝙳𝙳 𝙰 𝚄𝚂𝙴𝚁 𝚃𝙾 𝙰𝚄𝚃𝙷 𝙻𝙸𝚂𝚃 𝙾𝙵 𝚃𝙷𝙴 𝙶𝚁𝙾𝚄𝙿.
+/unauth [𝚄𝚂𝙴𝚁𝙽𝙰𝙼𝙴] - 𝚁𝙴𝙼𝙾𝚅𝙴 𝙰 𝚄𝚂𝙴𝚁 𝙵𝚁𝙾𝙼 𝙰𝚄𝚃𝙷 𝙻𝙸𝚂𝚃 𝙾𝙵 𝚃𝙷𝙴 𝙶𝚁𝙾𝚄𝙿.
+/authusers - 𝙲𝙷𝙴𝙲𝙺 𝙰𝚄𝚃𝙷 𝙻𝙸𝚂𝚃 𝙾𝙵 𝚃𝙷𝙴 𝙶𝚁𝙾𝚄𝙿."""
 
 
 HELP_2 = """✅<u>**Play Commands:**</u>
