@@ -1,11 +1,4 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
+
 
 import random
 import string
@@ -19,21 +12,21 @@ from pytgcalls.exceptions import NoActiveGroupCall
 import config
 from config import BANNED_USERS, lyrical
 from strings import get_command
-from YukkiMusic import (Apple, Resso, SoundCloud, Spotify, Telegram,
+from Tom import (Apple, Resso, SoundCloud, Spotify, Telegram,
                         YouTube, app)
-from YukkiMusic.core.call import Yukki
-from YukkiMusic.utils import seconds_to_min, time_to_seconds
-from YukkiMusic.utils.channelplay import get_channeplayCB
-from YukkiMusic.utils.database import is_video_allowed
-from YukkiMusic.utils.decorators.language import languageCB
-from YukkiMusic.utils.decorators.play import PlayWrapper
-from YukkiMusic.utils.formatters import formats
-from YukkiMusic.utils.inline.play import (livestream_markup,
+from Tom.core.call import Tom
+from Tom.utils import seconds_to_min, time_to_seconds
+from Tom.utils.channelplay import get_channeplayCB
+from Tom.utils.database import is_video_allowed
+from Tom.utils.decorators.language import languageCB
+from Tom.utils.decorators.play import PlayWrapper
+from Tom.utils.formatters import formats
+from Tom.utils.inline.play import (livestream_markup,
                                           playlist_markup,
                                           slider_markup, track_markup)
-from YukkiMusic.utils.inline.playlist import botplaylist_markup
-from YukkiMusic.utils.logger import play_logs
-from YukkiMusic.utils.stream.stream import stream
+from Tom.utils.inline.playlist import botplaylist_markup
+from Tom.utils.logger import play_logs
+from Tom.utils.stream.stream import stream
 
 # Command
 PLAY_COMMAND = get_command("PLAY_COMMAND")
