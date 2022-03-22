@@ -1,16 +1,9 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
+
 
 import asyncio
 
-from YukkiMusic.misc import db
-from YukkiMusic.utils.database import (get_active_chats,
+from Tom.misc import db
+from Tom.utils.database import (get_active_chats,
                                        is_music_playing)
 
 
