@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: THE JERRY SUPPORT
+    url: https://t.me/THEJERRYSUPPORT
+    about: Direct chat on non-inquiries subjects.
+  - name: Documentation
+    url: https://Tom.tech/
+    about: Documentation for getting started with bot.
