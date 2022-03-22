@@ -1,11 +1,4 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
+
 import asyncio
 
 from pyrogram import filters
@@ -13,12 +6,12 @@ from pyrogram.types import Message, CallbackQuery
 
 from config import BANNED_USERS, MUSIC_BOT_NAME, adminlist, lyrical
 from strings import get_command
-from YukkiMusic import app
-from YukkiMusic.core.call import Yukki
-from YukkiMusic.misc import db
-from YukkiMusic.utils.database import get_authuser_names, get_cmode
-from YukkiMusic.utils.decorators import language, AdminActual, ActualAdminCB
-from YukkiMusic.utils.formatters import alpha_to_int
+from Tom import app
+from Tom.core.call import Tom
+from Tom.misc import db
+from Tom.utils.database import get_authuser_names, get_cmode
+from Tom.utils.decorators import language, AdminActual, ActualAdminCB
+from Tom.utils.formatters import alpha_to_int
 
 ### Multi-Lang Commands
 RELOAD_COMMAND = get_command("RELOAD_COMMAND")
@@ -49,7 +42,7 @@ async def reload_admin_cache(client, message: Message, _):
         await message.reply_text(_["admin_20"])
     except:
         await message.reply_text(
-            "Failed to reload admincache. Make sure Bot is admin in your chat."
+            "𝙵𝙰𝙸𝙻𝙴𝙳 𝚃𝙾 𝚁𝙴𝙻𝙾𝙰𝙳 𝙰𝙳𝙼𝙸𝙽𝙲𝙰𝙲𝙷𝙴. 𝙼𝙰𝙺𝙴 𝚂𝚄𝚁𝙴 𝙱𝙾𝚃 𝙸𝚂 𝙰𝙳𝙼𝙸𝙽 𝙸𝙽 𝚈𝙾𝚄𝚁 𝙲𝙷𝙰𝚃."
         )
 
 
@@ -62,12 +55,12 @@ async def reload_admin_cache(client, message: Message, _):
 @AdminActual
 async def restartbot(client, message: Message, _):
     mystic = await message.reply_text(
-        f"Please Wait.. Restarting {MUSIC_BOT_NAME} for your chat.."
+        f"𝙿𝙻𝙴𝙰𝚂𝙴 𝚆𝙰𝙸𝚃.. 𝚁𝙴𝚂𝚃𝙰𝚁𝚃𝙸𝙽𝙶 {MUSIC_BOT_NAME} 𝙵𝙾𝚁 𝚈𝙾𝚄𝚁 𝙲𝙷𝙰𝚃.."
     )
     await asyncio.sleep(1)
     try:
         db[message.chat.id] = []
-        await Yukki.stop_stream(message.chat.id)
+        await Tom.stop_stream(message.chat.id)
     except:
         pass
     chat_id = await get_cmode(message.chat.id)
@@ -78,11 +71,11 @@ async def restartbot(client, message: Message, _):
             pass
         try:
             db[chat_id] = []
-            await Yukki.stop_stream(chat_id)
+            await Tom.stop_stream(chat_id)
         except:
             pass
     return await mystic.edit_text(
-        "Successfully restarted. Try playing now.."
+        "𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈 𝚁𝙴𝚂𝚃𝙰𝚁𝚃𝙴𝙳. 𝚃𝚁𝚈 𝙿𝙻𝙰𝚈𝙸𝙽𝙶 𝙽𝙾𝚆.."
     )
 
 
