@@ -6,7 +6,7 @@ from pyrogram.types import Message
 from config import BANNED_USERS
 from strings import get_command
 from Tom import app
-from Tom.core.call import Yukki
+from Tom.core.call import Tom
 from Tom.utils.database import is_music_playing, music_off
 from Tom.utils.decorators import AdminRightsCheck
 
