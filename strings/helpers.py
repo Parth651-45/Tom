@@ -77,7 +77,7 @@ HELP_4 = """⚠️<u>**𝙴𝚇𝚃𝚁𝙰 𝙲𝙾𝙼𝙼𝙰𝙽𝙳𝚂:**<
 /ping- 𝙿𝙸𝙽𝙶 𝚃𝙷𝙴 𝙱𝙾𝚃 𝙰𝙽𝙳 𝙲𝙷𝙴𝙲𝙺 𝚁𝙰𝙼, 𝙲𝙿𝚄 𝙴𝚃𝙲 𝚂𝚃𝙰𝚃𝚂 𝙾𝙵 𝙱𝙾𝚃.
 
 
-HELP_5 = """⚠️**<u>ADD & REMOVE SUDO USERS :</u>**
+HELP_5 = """**<u>ADD & REMOVE SUDO USERS :</u>**
 /addsudo [Username or Reply to a user]
 /delsudo [Username or Reply to a user]
 
