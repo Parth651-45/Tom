@@ -23,7 +23,7 @@ from Tom.utils.database import (get_active_chats,
                                        remove_active_chat,
                                        remove_active_video_chat)
 from Tom.utils.decorators.language import language
-from Tom.utils.pastebin import Yukkibin
+from Tom.utils.pastebin import Tombin
 
 # Commands
 GETLOG_COMMAND = get_command("GETLOG_COMMAND")
