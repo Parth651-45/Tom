@@ -1,16 +1,9 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
+
 
 import random
 
-from YukkiMusic import userbot
-from YukkiMusic.core.mongo import mongodb
+from Tom import userbot
+from Tom.core.mongo import mongodb
 
 db = mongodb.assistants
 
@@ -31,7 +24,7 @@ async def get_client(assistant: int):
 
 
 async def set_assistant(chat_id):
-    from YukkiMusic.core.userbot import assistants
+    from Tom.core.userbot import assistants
 
     ran_assistant = random.choice(assistants)
     assistantdict[chat_id] = ran_assistant
@@ -45,7 +38,7 @@ async def set_assistant(chat_id):
 
 
 async def get_assistant(chat_id: int) -> str:
-    from YukkiMusic.core.userbot import assistants
+    from Tom.core.userbot import assistants
 
     assistant = assistantdict.get(chat_id)
     if not assistant:
@@ -72,7 +65,7 @@ async def get_assistant(chat_id: int) -> str:
 
 
 async def set_calls_assistant(chat_id):
-    from YukkiMusic.core.userbot import assistants
+    from Tom.core.userbot import assistants
 
     ran_assistant = random.choice(assistants)
     assistantdict[chat_id] = ran_assistant
@@ -85,7 +78,7 @@ async def set_calls_assistant(chat_id):
 
 
 async def group_assistant(self, chat_id: int) -> int:
-    from YukkiMusic.core.userbot import assistants
+    from Tom.core.userbot import assistants
 
     assistant = assistantdict.get(chat_id)
     if not assistant:
