@@ -1,25 +1,18 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
+
 
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 from config import PLAYLIST_IMG_URL, PRIVATE_BOT_MODE, adminlist
 from strings import get_string
-from YukkiMusic import YouTube, app
-from YukkiMusic.misc import SUDOERS
-from YukkiMusic.utils.database import (get_cmode, get_lang,
+from Tom import YouTube, app
+from Tom.misc import SUDOERS
+from Tom.utils.database import (get_cmode, get_lang,
                                        get_playmode, get_playtype,
                                        is_active_chat,
                                        is_commanddelete_on,
                                        is_served_private_chat)
-from YukkiMusic.utils.database.memorydatabase import is_maintenance
-from YukkiMusic.utils.inline.playlist import botplaylist_markup
+from Tom.utils.database.memorydatabase import is_maintenance
+from Tom.utils.inline.playlist import botplaylist_markup
 
 
 def PlayWrapper(command):
