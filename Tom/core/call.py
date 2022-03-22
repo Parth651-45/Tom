@@ -1,11 +1,4 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
-#
-# All rights reserved.
+
 
 import asyncio
 from typing import Union
@@ -25,9 +18,9 @@ from pytgcalls.types.stream import StreamAudioEnded
 
 import config
 from strings import get_string
-from YukkiMusic import LOGGER, YouTube, app
-from YukkiMusic.misc import db
-from YukkiMusic.utils.database import (add_active_chat,
+from Tom import LOGGER, YouTube, app
+from Tom.misc import db
+from Tom.utils.database import (add_active_chat,
                                        add_active_video_chat,
                                        get_assistant,
                                        get_audio_bitrate, get_lang,
@@ -36,11 +29,11 @@ from YukkiMusic.utils.database import (add_active_chat,
                                        mute_off, remove_active_chat,
                                        remove_active_video_chat,
                                        set_loop)
-from YukkiMusic.utils.exceptions import AssistantErr
-from YukkiMusic.utils.inline.play import (stream_markup,
+from Tom.utils.exceptions import AssistantErr
+from Tom.utils.inline.play import (stream_markup,
                                           telegram_markup)
-from YukkiMusic.utils.stream.autoclear import auto_clean
-from YukkiMusic.utils.thumbnails import gen_thumb
+from Tom.utils.stream.autoclear import auto_clean
+from Tom.utils.thumbnails import gen_thumb
 
 
 async def _clear_(chat_id):
@@ -564,4 +557,4 @@ class Call(PyTgCalls):
             await self.change_stream(client, update.chat_id)
 
 
-Yukki = Call()
+Tom = Call()
