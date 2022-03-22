@@ -47,7 +47,7 @@ async def init():
         pass
     await app.start()
     for all_module in ALL_MODULES:
-        importlib.import_module("YukkiMusic.plugins" + all_module)
+        importlib.import_module("Tom.plugins" + all_module)
     LOGGER("Tom.plugins").info(
         "Successfully Imported Modules "
     )
