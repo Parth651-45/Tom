@@ -2,7 +2,7 @@
 
 from pyrogram import filters
 from pyrogram.types import Message
-from YukkiMusic.utils.database import set_loop
+from Tom.utils.database import set_loop
 
 from config import BANNED_USERS
 from strings import get_command
