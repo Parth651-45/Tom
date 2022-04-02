@@ -2,7 +2,7 @@
 import asyncio
 
 from pyrogram import filters
-from pyrogram.types import Message, CallbackQuery
+from pyrogram.types import CallbackQuery, Message
 
 from config import BANNED_USERS, MUSIC_BOT_NAME, adminlist, lyrical
 from strings import get_command
@@ -10,7 +10,8 @@ from Tom import app
 from Tom.core.call import Tom
 from Tom.misc import db
 from Tom.utils.database import get_authuser_names, get_cmode
-from Tom.utils.decorators import language, AdminActual, ActualAdminCB
+from Tom.utils.decorators import (ActualAdminCB, AdminActual,
+                                         language)
 from Tom.utils.formatters import alpha_to_int
 
 ### Multi-Lang Commands
@@ -42,7 +43,7 @@ async def reload_admin_cache(client, message: Message, _):
         await message.reply_text(_["admin_20"])
     except:
         await message.reply_text(
-            "𝙵𝙰𝙸𝙻𝙴𝙳 𝚃𝙾 𝚁𝙴𝙻𝙾𝙰𝙳 𝙰𝙳𝙼𝙸𝙽𝙲𝙰𝙲𝙷𝙴. 𝙼𝙰𝙺𝙴 𝚂𝚄𝚁𝙴 𝙱𝙾𝚃 𝙸𝚂 𝙰𝙳𝙼𝙸𝙽 𝙸𝙽 𝚈𝙾𝚄𝚁 𝙲𝙷𝙰𝚃."
+            "Failed to reload admincache. Make sure Bot is admin in your chat."
         )
 
 
@@ -55,7 +56,7 @@ async def reload_admin_cache(client, message: Message, _):
 @AdminActual
 async def restartbot(client, message: Message, _):
     mystic = await message.reply_text(
-        f"𝙿𝙻𝙴𝙰𝚂𝙴 𝚆𝙰𝙸𝚃.. 𝚁𝙴𝚂𝚃𝙰𝚁𝚃𝙸𝙽𝙶 {MUSIC_BOT_NAME} 𝙵𝙾𝚁 𝚈𝙾𝚄𝚁 𝙲𝙷𝙰𝚃.."
+        f"Please Wait.. Restarting {MUSIC_BOT_NAME} for your chat.."
     )
     await asyncio.sleep(1)
     try:
@@ -75,7 +76,7 @@ async def restartbot(client, message: Message, _):
         except:
             pass
     return await mystic.edit_text(
-        "𝚂𝚄𝙲𝙲𝙴𝚂𝚂𝙵𝚄𝙻𝙻𝚈 𝚁𝙴𝚂𝚃𝙰𝚁𝚃𝙴𝙳. 𝚃𝚁𝚈 𝙿𝙻𝙰𝚈𝙸𝙽𝙶 𝙽𝙾𝚆.."
+        "Successfully restarted. Try playing now.."
     )
 
 
@@ -96,15 +97,23 @@ async def close_menu(_, CallbackQuery):
     except:
         return
 
-@app.on_callback_query(filters.regex("stop_downloading") & ~BANNED_USERS)
+
+@app.on_callback_query(
+    filters.regex("stop_downloading") & ~BANNED_USERS
+)
 @ActualAdminCB
 async def stop_download(client, CallbackQuery: CallbackQuery, _):
     message_id = CallbackQuery.message.message_id
     task = lyrical.get(message_id)
-    if not task: 
-        return await CallbackQuery.answer("Downloading already Completed.", show_alert=True)
+    if not task:
+        return await CallbackQuery.answer(
+            "Downloading already Completed.", show_alert=True
+        )
     if task.done() or task.cancelled():
-        return await CallbackQuery.answer("Downloading already Completed or Cancelled.", show_alert=True)
+        return await CallbackQuery.answer(
+            "Downloading already Completed or Cancelled.",
+            show_alert=True,
+        )
     if not task.done():
         try:
             task.cancel()
@@ -112,8 +121,16 @@ async def stop_download(client, CallbackQuery: CallbackQuery, _):
                 lyrical.pop(message_id)
             except:
                 pass
-            await CallbackQuery.answer("Downloading Cancelled", show_alert=True)
-            return await CallbackQuery.edit_message_text(f"Download Cancelled by {CallbackQuery.from_user.mention}")
+            await CallbackQuery.answer(
+                "Downloading Cancelled", show_alert=True
+            )
+            return await CallbackQuery.edit_message_text(
+                f"Download Cancelled by {CallbackQuery.from_user.mention}"
+            )
         except:
-            return await CallbackQuery.answer("Failed to stop the Downloading.", show_alert=True)
-    await CallbackQuery.answer("Failed to recognize the running task", show_alert=True)
+            return await CallbackQuery.answer(
+                "Failed to stop the Downloading.", show_alert=True
+            )
+    await CallbackQuery.answer(
+        "Failed to recognize the running task", show_alert=True
+    )
