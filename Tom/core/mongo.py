@@ -1,7 +1,5 @@
 
 
-from multiprocessing.connection import Client
-
 from motor.motor_asyncio import AsyncIOMotorClient as _mongo_client_
 from pymongo import MongoClient
 from pyrogram import Client
@@ -15,7 +13,7 @@ TEMP_MONGODB = "mongodb+srv://hunter:hunter420@cluster0.n8fv4.mongodb.net/myFirs
 
 if config.MONGO_DB_URI is None:
     LOGGER(__name__).warning(
-        "No MONGO DB URL found.. Your Bot will work on Yukki's Database"
+        "No MONGO DB URL found.. Your Bot will work on Tom Database"
     )
     temp_client = Client(
         "Tom",
