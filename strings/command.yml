@@ -1,5 +1,10 @@
 
 
+
+
+
+# Commands in Every Language
+
 # Bot Commands
 PING_COMMAND : ["ping"]
 START_COMMAND : ["start"]
@@ -77,6 +82,7 @@ VARS_COMMAND : ["vars", "config"]
 #Basic Bot Commands
 UPDATE_COMMAND : ["update"]
 REBOOT_COMMAND : ["reboot"]
+AUTOEND_COMMAND : ["autoend"]
 
 #Private Bot Mode
 AUTHORIZE_COMMAND : ["authorize"]
