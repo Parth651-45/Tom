@@ -2,12 +2,12 @@
 
 from pyrogram import filters
 from pyrogram.types import Message
-from Tom.utils.database import set_loop
 
 from config import BANNED_USERS
 from strings import get_command
 from Tom import app
 from Tom.core.call import Tom
+from Tom.utils.database import set_loop
 from Tom.utils.decorators import AdminRightsCheck
 
 # Commands
