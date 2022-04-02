@@ -8,7 +8,10 @@ import config
 from config import clean
 from strings import get_string
 from Tom import app
-from Tom.utils.database import get_lang, get_served_chats, get_private_served_chats, is_suggestion
+from Tom.utils.database import (get_lang,
+                                       get_private_served_chats,
+                                       get_served_chats,
+                                       is_suggestion)
 
 LEAVE_TIME = config.AUTO_SUGGESTION_TIME
 
