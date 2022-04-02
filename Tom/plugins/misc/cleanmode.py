@@ -156,7 +156,7 @@ async def braodcast_message(client, message, _):
     if "-assistant" in message.text:
         aw = await message.reply_text(_["broad_2"])
         text = _["broad_3"]
-        from YukkiMusic.core.userbot import assistants
+        from Tom.core.userbot import assistants
 
         for num in assistants:
             sent = 0
