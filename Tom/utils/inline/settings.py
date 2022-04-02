@@ -1,5 +1,6 @@
 
 
+
 from typing import Union
 
 from pyrogram.types import InlineKeyboardButton
@@ -129,7 +130,10 @@ def video_quality_markup(
 
 
 def cleanmode_settings_markup(
-    _, status: Union[bool, str] = None, dels: Union[bool, str] = None, sug: Union[bool, str] = None
+    _,
+    status: Union[bool, str] = None,
+    dels: Union[bool, str] = None,
+    sug: Union[bool, str] = None,
 ):
     buttons = [
         [
@@ -182,6 +186,72 @@ def auth_users_markup(_, status: Union[bool, str] = None):
                 text=_["ST_B_16"] if status == True else _["ST_B_17"],
                 callback_data="AUTH",
             ),
+        ],
+        [
+            InlineKeyboardButton(
+                text=_["ST_B_18"], callback_data="AUTHLIST"
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text=_["BACK_BUTTON"],
+                callback_data="settingsback_helper",
+            ),
+            InlineKeyboardButton(
+                text=_["CLOSE_BUTTON"], callback_data="close"
+            ),
+        ],
+    ]
+    return buttons
+
+
+def playmode_users_markup(
+    _,
+    Direct: Union[bool, str] = None,
+    Group: Union[bool, str] = None,
+    Playtype: Union[bool, str] = None,
+):
+    buttons = [
+        [
+            InlineKeyboardButton(
+                text=_["ST_B_19"], callback_data="SEARCHANSWER"
+            ),
+            InlineKeyboardButton(
+                text=_["ST_B_20"] if Direct == True else _["ST_B_21"],
+                callback_data="MODECHANGE",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text=_["ST_B_22"], callback_data="AUTHANSWER"
+            ),
+            InlineKeyboardButton(
+                text=_["ST_B_16"] if Group == True else _["ST_B_17"],
+                callback_data="CHANNELMODECHANGE",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text=_["ST_B_25"], callback_data="PLAYTYPEANSWER"
+            ),
+            InlineKeyboardButton(
+                text=_["ST_B_16"]
+                if Playtype == True
+                else _["ST_B_17"],
+                callback_data="PLAYTYPECHANGE",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text=_["BACK_BUTTON"],
+                callback_data="settingsback_helper",
+            ),
+            InlineKeyboardButton(
+                text=_["CLOSE_BUTTON"], callback_data="close"
+            ),
+        ],
+    ]
+    return buttons
         ],
         [
             InlineKeyboardButton(
