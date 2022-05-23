@@ -1,3 +1,4 @@
+
 aiofiles
 aiohttp
 asyncio
@@ -10,9 +11,9 @@ lyricsgenius
 motor
 pillow
 psutil
-py-tgcalls
+py-tgcalls==0.8.6
 pykeyboard
-pyrogram
+pyrogram==1.4.16
 python-dotenv
 pyyaml==5.3.1
 requests
