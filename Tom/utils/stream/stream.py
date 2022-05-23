@@ -18,7 +18,7 @@ from Tom.utils.exceptions import AssistantErr
 from Tom.utils.inline.play import (stream_markup,
                                           telegram_markup)
 from Tom.utils.inline.playlist import close_markup
-from Tom.utils.pastebin import Yukkibin
+from Tom.utils.pastebin import Tombin
 from Tom.utils.stream.queue import put_queue, put_queue_index
 from Tom.utils.thumbnails import gen_thumb
 
