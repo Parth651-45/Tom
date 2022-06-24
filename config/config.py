@@ -342,4 +342,4 @@ if not MUSIC_BOT_NAME.isascii():
     print(
         "[ERROR] - You've defined MUSIC_BOT_NAME wrong. Please don't use any special characters or Special font for this... Keep it simple and small."
     )
-    sys.exit()
+   
