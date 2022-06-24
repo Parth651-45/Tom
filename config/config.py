@@ -34,7 +34,7 @@ SONG_DOWNLOAD_DURATION = int(
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001701613521"))
 
 # A name for your Music bot.
-MUSIC_BOT_NAME = getenv("To ")
+MUSIC_BOT_NAME = getenv("Tom")
 
 # Your User ID.
 OWNER_ID = list(
@@ -52,7 +52,7 @@ UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
     "https://github.com/Parth651-45/Tom",
 )
-UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
+UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 
 # GIT TOKEN ( if your edited repo is private)
 GIT_TOKEN = getenv("GIT_TOKEN", None)
