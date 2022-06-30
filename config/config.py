@@ -27,7 +27,7 @@ DURATION_LIMIT_MIN = int(
 
 # Duration Limit for downloading Songs in MP3 or MP4 format from bot
 SONG_DOWNLOAD_DURATION = int(
-    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "180")
+    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "120")
 )  # Remember to give value in Minutes
 
 # You'll need a Private Group ID for this.
@@ -97,8 +97,8 @@ TELEGRAM_DOWNLOAD_EDIT_SLEEP = int(getenv("TELEGRAM_EDIT_SLEEP", "5"))
 GITHUB_REPO = getenv("GITHUB_REPO", None)
 
 # Spotify Client.. Get it from https://developer.spotify.com/dashboard
-SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", None)
-SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", None)
+SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", "b8173a8489c64b8c93a80b3736e9e667")
+SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", "efc8f6c6cd564fcb979808dd01a1fee3")
 
 # Maximum number of video calls allowed on bot. You can later set it via /set_video_limit on telegram
 VIDEO_STREAM_LIMIT = int(getenv("VIDEO_STREAM_LIMIT", "3"))
